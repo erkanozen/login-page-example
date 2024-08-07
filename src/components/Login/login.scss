@@ -1,0 +1,112 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff26;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: -2px 7px 37px 8px rgba(0, 0, 0, 0.32);
+    background-color: white;
+    @media (max-width: 1024px) {
+      width: 350px;
+    }
+    @media (max-width: 768px) {
+      width: 300px;
+    }
+
+    &--img {
+      height: 100px;
+      width: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    &--input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 100%;
+      position: relative;
+
+      .show-icon {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        cursor: pointer;
+      }
+    }
+    &--error {
+      color: red;
+      font-weight: bolder;
+    }
+    &--button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 20px;
+      button {
+        width: 90%;
+        height: 30px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bolder;
+        background: linear-gradient(45deg, #5f0ca0 25%, #1054d7 75%);
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+    &--forget {
+      margin-top: 10px;
+
+      a {
+        text-decoration: none;
+        color: red;
+        font-size: 14px;
+        font-weight: bolder;
+        border-bottom: 2px solid red;
+        padding: 2px;
+      }
+    }
+    &--powered {
+      margin-top: 40px;
+      color: gray;
+
+      a {
+        text-decoration: none;
+        background: linear-gradient(45deg, #5f0ca0 25%, #1054d7 75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  &_input {
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 20px 40px;
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: 12px;
+      font-weight: bolder;
+    }
+  }
+  &_icon {
+    position: absolute;
+    left: 30px;
+  }
+}
